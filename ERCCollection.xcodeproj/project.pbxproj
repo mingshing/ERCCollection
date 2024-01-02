@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20F550067514FBD715F1069E /* Pods_ERCCollectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1450B05CE99FA324A47A05D /* Pods_ERCCollectionTests.framework */; };
+		A110BE34A2CF867029A36940 /* Pods_ERCCollection_ERCCollectionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83226B37792F018746A963D3 /* Pods_ERCCollection_ERCCollectionUITests.framework */; };
+		B1FA79343271A3CEFCEFB524 /* Pods_ERCCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0FF25630A03248CC1613D3 /* Pods_ERCCollection.framework */; };
 		E8DE1AB12B442D830091ABF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AB02B442D830091ABF4 /* AppDelegate.swift */; };
 		E8DE1AB32B442D830091ABF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AB22B442D830091ABF4 /* SceneDelegate.swift */; };
 		E8DE1AB52B442D830091ABF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AB42B442D830091ABF4 /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 		E8DE1AC82B442D850091ABF4 /* ERCCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AC72B442D850091ABF4 /* ERCCollectionTests.swift */; };
 		E8DE1AD22B442D850091ABF4 /* ERCCollectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AD12B442D850091ABF4 /* ERCCollectionUITests.swift */; };
 		E8DE1AD42B442D850091ABF4 /* ERCCollectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AD32B442D850091ABF4 /* ERCCollectionUITestsLaunchTests.swift */; };
+		E8DE1AE52B443AC50091ABF4 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AE42B443AC50091ABF4 /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A201280762BA7E4FF08F461 /* Pods-ERCCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollection.release.xcconfig"; path = "Target Support Files/Pods-ERCCollection/Pods-ERCCollection.release.xcconfig"; sourceTree = "<group>"; };
+		1CBDD9A0E545F3D2771DA838 /* Pods-ERCCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollectionTests.release.xcconfig"; path = "Target Support Files/Pods-ERCCollectionTests/Pods-ERCCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F0FF25630A03248CC1613D3 /* Pods_ERCCollection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERCCollection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A9EC519630F64BC27B4D9E1 /* Pods-ERCCollectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollectionTests.debug.xcconfig"; path = "Target Support Files/Pods-ERCCollectionTests/Pods-ERCCollectionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7658E69EE13E245A28C45EDB /* Pods-ERCCollection-ERCCollectionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollection-ERCCollectionUITests.debug.xcconfig"; path = "Target Support Files/Pods-ERCCollection-ERCCollectionUITests/Pods-ERCCollection-ERCCollectionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7840C5BAE9072FCD392F3733 /* Pods-ERCCollection-ERCCollectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollection-ERCCollectionUITests.release.xcconfig"; path = "Target Support Files/Pods-ERCCollection-ERCCollectionUITests/Pods-ERCCollection-ERCCollectionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83226B37792F018746A963D3 /* Pods_ERCCollection_ERCCollectionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERCCollection_ERCCollectionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1450B05CE99FA324A47A05D /* Pods_ERCCollectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERCCollectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0D44BE118F7489801D6ABE /* Pods-ERCCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERCCollection.debug.xcconfig"; path = "Target Support Files/Pods-ERCCollection/Pods-ERCCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		E8DE1AAD2B442D830091ABF4 /* ERCCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERCCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DE1AB02B442D830091ABF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8DE1AB22B442D830091ABF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		E8DE1ACD2B442D850091ABF4 /* ERCCollectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERCCollectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DE1AD12B442D850091ABF4 /* ERCCollectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERCCollectionUITests.swift; sourceTree = "<group>"; };
 		E8DE1AD32B442D850091ABF4 /* ERCCollectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERCCollectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8DE1AE42B443AC50091ABF4 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FA79343271A3CEFCEFB524 /* Pods_ERCCollection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F550067514FBD715F1069E /* Pods_ERCCollectionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A110BE34A2CF867029A36940 /* Pods_ERCCollection_ERCCollectionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4179887924A401F3E5100E84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F0FF25630A03248CC1613D3 /* Pods_ERCCollection.framework */,
+				83226B37792F018746A963D3 /* Pods_ERCCollection_ERCCollectionUITests.framework */,
+				A1450B05CE99FA324A47A05D /* Pods_ERCCollectionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AEED8A79845C7BC1E73097E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D44BE118F7489801D6ABE /* Pods-ERCCollection.debug.xcconfig */,
+				0A201280762BA7E4FF08F461 /* Pods-ERCCollection.release.xcconfig */,
+				7658E69EE13E245A28C45EDB /* Pods-ERCCollection-ERCCollectionUITests.debug.xcconfig */,
+				7840C5BAE9072FCD392F3733 /* Pods-ERCCollection-ERCCollectionUITests.release.xcconfig */,
+				6A9EC519630F64BC27B4D9E1 /* Pods-ERCCollectionTests.debug.xcconfig */,
+				1CBDD9A0E545F3D2771DA838 /* Pods-ERCCollectionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E8DE1AA42B442D830091ABF4 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				E8DE1AC62B442D850091ABF4 /* ERCCollectionTests */,
 				E8DE1AD02B442D850091ABF4 /* ERCCollectionUITests */,
 				E8DE1AAE2B442D830091ABF4 /* Products */,
+				7AEED8A79845C7BC1E73097E /* Pods */,
+				4179887924A401F3E5100E84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +141,10 @@
 		E8DE1AAF2B442D830091ABF4 /* ERCCollection */ = {
 			isa = PBXGroup;
 			children = (
+				E8DE1AE02B4439B90091ABF4 /* App */,
+				E8DE1AE32B443A970091ABF4 /* Library */,
+				E8DE1AE22B443A140091ABF4 /* Models */,
+				E8DE1AE12B4439CC0091ABF4 /* Networking */,
 				E8DE1AB02B442D830091ABF4 /* AppDelegate.swift */,
 				E8DE1AB22B442D830091ABF4 /* SceneDelegate.swift */,
 				E8DE1AB42B442D830091ABF4 /* ViewController.swift */,
@@ -127,6 +173,35 @@
 			path = ERCCollectionUITests;
 			sourceTree = "<group>";
 		};
+		E8DE1AE02B4439B90091ABF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8DE1AE12B4439CC0091ABF4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E8DE1AE22B443A140091ABF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8DE1AE32B443A970091ABF4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E8DE1AE42B443AC50091ABF4 /* BaseCoordinator.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8DE1AD72B442D850091ABF4 /* Build configuration list for PBXNativeTarget "ERCCollection" */;
 			buildPhases = (
+				209F1132AE55C80620C6C212 /* [CP] Check Pods Manifest.lock */,
 				E8DE1AA92B442D830091ABF4 /* Sources */,
 				E8DE1AAA2B442D830091ABF4 /* Frameworks */,
 				E8DE1AAB2B442D830091ABF4 /* Resources */,
+				35054474A91D65873F2E81DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8DE1ADA2B442D850091ABF4 /* Build configuration list for PBXNativeTarget "ERCCollectionTests" */;
 			buildPhases = (
+				E4F7C993C6E65B4778BBE867 /* [CP] Check Pods Manifest.lock */,
 				E8DE1ABF2B442D850091ABF4 /* Sources */,
 				E8DE1AC02B442D850091ABF4 /* Frameworks */,
 				E8DE1AC12B442D850091ABF4 /* Resources */,
@@ -169,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8DE1ADD2B442D850091ABF4 /* Build configuration list for PBXNativeTarget "ERCCollectionUITests" */;
 			buildPhases = (
+				ECEB29444EBB7E29048B7EE0 /* [CP] Check Pods Manifest.lock */,
 				E8DE1AC92B442D850091ABF4 /* Sources */,
 				E8DE1ACA2B442D850091ABF4 /* Frameworks */,
 				E8DE1ACB2B442D850091ABF4 /* Resources */,
+				20657C9A8BA1AD84D460943F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +333,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20657C9A8BA1AD84D460943F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERCCollection-ERCCollectionUITests/Pods-ERCCollection-ERCCollectionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERCCollection-ERCCollectionUITests/Pods-ERCCollection-ERCCollectionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ERCCollection-ERCCollectionUITests/Pods-ERCCollection-ERCCollectionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		209F1132AE55C80620C6C212 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ERCCollection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35054474A91D65873F2E81DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERCCollection/Pods-ERCCollection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERCCollection/Pods-ERCCollection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ERCCollection/Pods-ERCCollection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4F7C993C6E65B4778BBE867 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ERCCollectionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECEB29444EBB7E29048B7EE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ERCCollection-ERCCollectionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8DE1AA92B442D830091ABF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8DE1AB52B442D830091ABF4 /* ViewController.swift in Sources */,
+				E8DE1AE92B443CA60091ABF4 /* AppCoordinator.swift in Sources */,
+				E8DE1AED2B443E910091ABF4 /* CollectionListCoordinator.swift in Sources */,
+				E8DE1AE72B443C4C0091ABF4 /* StoryboardInitializable.swift in Sources */,
+				E8DE1AEF2B443EC30091ABF4 /* CollectionListViewController.swift in Sources */,
 				E8DE1AB12B442D830091ABF4 /* AppDelegate.swift in Sources */,
 				E8DE1AB32B442D830091ABF4 /* SceneDelegate.swift in Sources */,
+				E8DE1AE52B443AC50091ABF4 /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +612,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -437,16 +624,18 @@
 		};
 		E8DE1AD82B442D850091ABF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB0D44BE118F7489801D6ABE /* Pods-ERCCollection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 554URW8XRV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ERCCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -465,16 +654,18 @@
 		};
 		E8DE1AD92B442D850091ABF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A201280762BA7E4FF08F461 /* Pods-ERCCollection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 554URW8XRV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ERCCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -493,6 +684,7 @@
 		};
 		E8DE1ADB2B442D850091ABF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A9EC519630F64BC27B4D9E1 /* Pods-ERCCollectionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +705,7 @@
 		};
 		E8DE1ADC2B442D850091ABF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBDD9A0E545F3D2771DA838 /* Pods-ERCCollectionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +726,7 @@
 		};
 		E8DE1ADE2B442D850091ABF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7658E69EE13E245A28C45EDB /* Pods-ERCCollection-ERCCollectionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +745,7 @@
 		};
 		E8DE1ADF2B442D850091ABF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7840C5BAE9072FCD392F3733 /* Pods-ERCCollection-ERCCollectionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
