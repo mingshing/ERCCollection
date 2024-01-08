@@ -1,0 +1,130 @@
+{
+  "ownedNfts": [
+    {
+      "contract": {
+        "address": "0xC852E1A0Be505E2Cb925698ad1934424D11a3468",
+        "name": "BloctoAssignment",
+        "symbol": "ASSIGNMENT",
+        "totalSupply": "15",
+        "tokenType": "ERC721",
+        "contractDeployer": "0x85fD692D2a075908079261F5E351e7fE0267dB02",
+        "deployedBlockNumber": 8091127,
+        "openSeaMetadata": {
+          "floorPrice": null,
+          "collectionName": null,
+          "collectionSlug": null,
+          "safelistRequestStatus": null,
+          "imageUrl": null,
+          "description": null,
+          "externalUrl": null,
+          "twitterUsername": null,
+          "discordUrl": null,
+          "bannerImageUrl": null,
+          "lastIngestedAt": "2024-01-02T14:17:28.000Z"
+        },
+        "isSpam": null,
+        "spamClassifications": []
+      },
+      "tokenId": "0",
+      "tokenType": "ERC721",
+      "name": "Accelerate",
+      "description": "Blocto assignment second collection",
+      "tokenUri": "https://alchemy.mypinata.cloud/ipfs/QmWK4nupu7h2JN36eGJyhoueSxCJrvmkpmQCuogEJELaFH/0",
+      "image": {
+        "cachedUrl": "https://nft-cdn.alchemy.com/eth-goerli/bc3b9a7378c5a913fff4f8240b3009d1",
+        "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-goerli/bc3b9a7378c5a913fff4f8240b3009d1",
+        "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-goerli/bc3b9a7378c5a913fff4f8240b3009d1",
+        "contentType": "image/png",
+        "size": 1728,
+        "originalUrl": "https://ipfs.io/ipfs/QmanU4QcTro4VMzJKvD3UtnKdaVusnpfmy2NBW7NNvoDAL/Accelerate.png"
+      },
+      "raw": {
+        "tokenUri": "https://ipfs.io/ipfs/QmWK4nupu7h2JN36eGJyhoueSxCJrvmkpmQCuogEJELaFH/0",
+        "metadata": {
+          "name": "Accelerate",
+          "description": "Blocto assignment second collection",
+          "image": "https://ipfs.io/ipfs/QmanU4QcTro4VMzJKvD3UtnKdaVusnpfmy2NBW7NNvoDAL/Accelerate.png",
+          "attributes": []
+        },
+        "error": null
+      },
+      "collection": null,
+      "mint": {
+        "mintAddress": null,
+        "blockNumber": null,
+        "timestamp": null,
+        "transactionHash": null
+      },
+      "owners": null,
+      "timeLastUpdated": "2024-01-03T12:56:26.275Z",
+      "balance": "1",
+      "acquiredAt": {
+        "blockTimestamp": null,
+        "blockNumber": null
+      }
+    },
+    {
+      "contract": {
+        "address": "0xC852E1A0Be505E2Cb925698ad1934424D11a3468",
+        "name": "BloctoAssignment",
+        "symbol": "ASSIGNMENT",
+        "totalSupply": "15",
+        "tokenType": "ERC721",
+        "contractDeployer": "0x85fD692D2a075908079261F5E351e7fE0267dB02",
+        "deployedBlockNumber": 8091127,
+        "openSeaMetadata": {
+          "floorPrice": null,
+          "collectionName": null,
+          "collectionSlug": null,
+          "safelistRequestStatus": null,
+          "imageUrl": null,
+          "description": null,
+          "externalUrl": null,
+          "twitterUsername": null,
+          "discordUrl": null,
+          "bannerImageUrl": null,
+          "lastIngestedAt": "2024-01-02T14:17:28.000Z"
+        },
+        "isSpam": null,
+        "spamClassifications": []
+      },
+      "tokenId": "1",
+      "tokenType": "ERC721",
+      "name": "Addressbook",
+      "description": "Blocto assignment second collection",
+      "tokenUri": "https://alchemy.mypinata.cloud/ipfs/QmWK4nupu7h2JN36eGJyhoueSxCJrvmkpmQCuogEJELaFH/1",
+      "image": {
+        "cachedUrl": "https://nft-cdn.alchemy.com/eth-goerli/66881dd8269cc6b5e3b6f6e9575bdf01",
+        "thumbnailUrl": "https://res.cloudinary.com/alchemyapi/image/upload/thumbnailv2/eth-goerli/66881dd8269cc6b5e3b6f6e9575bdf01",
+        "pngUrl": "https://res.cloudinary.com/alchemyapi/image/upload/convert-png/eth-goerli/66881dd8269cc6b5e3b6f6e9575bdf01",
+        "contentType": "image/png",
+        "size": 1174,
+        "originalUrl": "https://ipfs.io/ipfs/QmanU4QcTro4VMzJKvD3UtnKdaVusnpfmy2NBW7NNvoDAL/Addressbook.png"
+      },
+      "raw": {
+        "tokenUri": "https://ipfs.io/ipfs/QmWK4nupu7h2JN36eGJyhoueSxCJrvmkpmQCuogEJELaFH/1",
+        "metadata": {
+          "name": "Addressbook",
+          "description": "Blocto assignment second collection",
+          "image": "https://ipfs.io/ipfs/QmanU4QcTro4VMzJKvD3UtnKdaVusnpfmy2NBW7NNvoDAL/Addressbook.png",
+          "attributes": []
+        },
+        "error": null
+      },
+      "collection": null,
+      "mint": {
+        "mintAddress": null,
+        "blockNumber": null,
+        "timestamp": null,
+        "transactionHash": null
+      },
+      "owners": null,
+      "timeLastUpdated": "2024-01-03T12:56:26.264Z",
+      "balance": "1",
+      "acquiredAt": {
+        "blockTimestamp": null,
+        "blockNumber": null
+      }
+    }
+ ]
+}

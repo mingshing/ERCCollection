@@ -28,6 +28,8 @@
 		E8DE1AF52B46F5E00091ABF4 /* CollectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */; };
 		E8DE1AF72B46F8170091ABF4 /* CollectionListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */; };
 		E8DE1AF92B46FA790091ABF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF82B46FA780091ABF4 /* Constants.swift */; };
+		E8DE1AFD2B4C3AF30091ABF4 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */; };
+		E8DE1AFE2B4C3AF30091ABF4 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListViewModel.swift; sourceTree = "<group>"; };
 		E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListService.swift; sourceTree = "<group>"; };
 		E8DE1AF82B46FA780091ABF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = /Users/kuokuo/ERCCollection/ERCCollection/Constants.swift; sourceTree = "<absolute>"; };
+		E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */,
+				E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -354,6 +358,7 @@
 				E8DE1ABD2B442D850091ABF4 /* LaunchScreen.storyboard in Resources */,
 				E8DE1ABA2B442D850091ABF4 /* Assets.xcassets in Resources */,
 				E8DE1AB82B442D830091ABF4 /* Main.storyboard in Resources */,
+				E8DE1AFD2B4C3AF30091ABF4 /* SampleResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DE1AFE2B4C3AF30091ABF4 /* SampleResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
