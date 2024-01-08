@@ -23,6 +23,11 @@
 		E8DE1AE92B443CA60091ABF4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AE82B443CA60091ABF4 /* AppCoordinator.swift */; };
 		E8DE1AED2B443E910091ABF4 /* CollectionListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AEC2B443E910091ABF4 /* CollectionListCoordinator.swift */; };
 		E8DE1AEF2B443EC30091ABF4 /* CollectionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AEE2B443EC30091ABF4 /* CollectionListViewController.swift */; };
+		E8DE1AF12B45AB620091ABF4 /* CollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF02B45AB620091ABF4 /* CollectionItem.swift */; };
+		E8DE1AF32B46F11C0091ABF4 /* CollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF22B46F11C0091ABF4 /* CollectionItemCell.swift */; };
+		E8DE1AF52B46F5E00091ABF4 /* CollectionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */; };
+		E8DE1AF72B46F8170091ABF4 /* CollectionListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */; };
+		E8DE1AF92B46FA790091ABF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF82B46FA780091ABF4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		E8DE1AE82B443CA60091ABF4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E8DE1AEC2B443E910091ABF4 /* CollectionListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListCoordinator.swift; sourceTree = "<group>"; };
 		E8DE1AEE2B443EC30091ABF4 /* CollectionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListViewController.swift; sourceTree = "<group>"; };
+		E8DE1AF02B45AB620091ABF4 /* CollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItem.swift; sourceTree = "<group>"; };
+		E8DE1AF22B46F11C0091ABF4 /* CollectionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemCell.swift; sourceTree = "<group>"; };
+		E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListViewModel.swift; sourceTree = "<group>"; };
+		E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListService.swift; sourceTree = "<group>"; };
+		E8DE1AF82B46FA780091ABF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = /Users/kuokuo/ERCCollection/ERCCollection/Constants.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,7 @@
 				E8DE1AE32B443A970091ABF4 /* Library */,
 				E8DE1AE22B443A140091ABF4 /* Models */,
 				E8DE1AE12B4439CC0091ABF4 /* Networking */,
+				E8DE1AF82B46FA780091ABF4 /* Constants.swift */,
 				E8DE1AB92B442D850091ABF4 /* Assets.xcassets */,
 				E8DE1ABB2B442D850091ABF4 /* LaunchScreen.storyboard */,
 				E8DE1ABE2B442D850091ABF4 /* Info.plist */,
@@ -191,6 +202,7 @@
 		E8DE1AE12B4439CC0091ABF4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 		E8DE1AE22B443A140091ABF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8DE1AF02B45AB620091ABF4 /* CollectionItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,8 +227,10 @@
 		E8DE1AEA2B443DA00091ABF4 /* CollectionList */ = {
 			isa = PBXGroup;
 			children = (
+				E8DE1AF22B46F11C0091ABF4 /* CollectionItemCell.swift */,
 				E8DE1AEC2B443E910091ABF4 /* CollectionListCoordinator.swift */,
 				E8DE1AEE2B443EC30091ABF4 /* CollectionListViewController.swift */,
+				E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */,
 			);
 			path = CollectionList;
 			sourceTree = "<group>";
@@ -468,11 +483,16 @@
 			files = (
 				E8DE1AE92B443CA60091ABF4 /* AppCoordinator.swift in Sources */,
 				E8DE1AED2B443E910091ABF4 /* CollectionListCoordinator.swift in Sources */,
+				E8DE1AF12B45AB620091ABF4 /* CollectionItem.swift in Sources */,
 				E8DE1AE72B443C4C0091ABF4 /* StoryboardInitializable.swift in Sources */,
+				E8DE1AF72B46F8170091ABF4 /* CollectionListService.swift in Sources */,
 				E8DE1AEF2B443EC30091ABF4 /* CollectionListViewController.swift in Sources */,
 				E8DE1AB12B442D830091ABF4 /* AppDelegate.swift in Sources */,
+				E8DE1AF52B46F5E00091ABF4 /* CollectionListViewModel.swift in Sources */,
 				E8DE1AB32B442D830091ABF4 /* SceneDelegate.swift in Sources */,
 				E8DE1AE52B443AC50091ABF4 /* BaseCoordinator.swift in Sources */,
+				E8DE1AF32B46F11C0091ABF4 /* CollectionItemCell.swift in Sources */,
+				E8DE1AF92B46FA790091ABF4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +680,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ERCCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -690,7 +710,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ERCCollection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
