@@ -37,28 +37,8 @@ class CollectionListViewController: UIViewController, StoryboardInitializable {
             }
             .disposed(by: disposeBag)
         
-        collectionView.rx.willDisplayCell
-            .observe(on: MainScheduler.instance)
-            .map({ ($0.cell as! CollectionItemCell, $0.at.item) })
-            .subscribe { [weak self] cell, indexPath in
-                guard let self = self else {return}
-                
-                print("indexPath: ", indexPath)
-            }
-            .disposed(by: disposeBag)
         collectionView.rx.modelSelected(CollectionItemViewModel.self)
             .bind(to: viewModel.selectCollection)
-            .disposed(by: disposeBag)
-        
-        collectionView.rx.itemSelected
-            .map({ $0.item })
-            .subscribe { [weak self] indexPath in
-                let row = indexPath.element ?? 0
-                
-                if let cell = self?.collectionView.cellForItem(at: IndexPath(item: row, section: 0) ) as? CollectionItemCell {
-                    print("bind the item clicked action")
-                }
-            }
             .disposed(by: disposeBag)
 
         collectionView.rx.willDisplayCell
