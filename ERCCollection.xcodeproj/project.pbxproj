@@ -30,6 +30,9 @@
 		E8DE1AF92B46FA790091ABF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AF82B46FA780091ABF4 /* Constants.swift */; };
 		E8DE1AFD2B4C3AF30091ABF4 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */; };
 		E8DE1AFE2B4C3AF30091ABF4 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */; };
+		E8DE1B002B4E4CA60091ABF4 /* CollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1AFF2B4E4CA60091ABF4 /* CollectionItemViewModel.swift */; };
+		E8DE1B022B4E57090091ABF4 /* CollectionListViewModelActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1B012B4E57090091ABF4 /* CollectionListViewModelActions.swift */; };
+		E8DE1B052B4E82130091ABF4 /* Kingfisher+Svg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE1B042B4E82130091ABF4 /* Kingfisher+Svg.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		E8DE1AF62B46F8170091ABF4 /* CollectionListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListService.swift; sourceTree = "<group>"; };
 		E8DE1AF82B46FA780091ABF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = /Users/kuokuo/ERCCollection/ERCCollection/Constants.swift; sourceTree = "<absolute>"; };
 		E8DE1AFC2B4C3AF30091ABF4 /* SampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
+		E8DE1AFF2B4E4CA60091ABF4 /* CollectionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemViewModel.swift; sourceTree = "<group>"; };
+		E8DE1B012B4E57090091ABF4 /* CollectionListViewModelActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListViewModelActions.swift; sourceTree = "<group>"; };
+		E8DE1B042B4E82130091ABF4 /* Kingfisher+Svg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Svg.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				E8DE1AE32B443A970091ABF4 /* Library */,
 				E8DE1AE22B443A140091ABF4 /* Models */,
 				E8DE1AE12B4439CC0091ABF4 /* Networking */,
+				E8DE1B032B4E81EE0091ABF4 /* Extensions */,
 				E8DE1AF82B46FA780091ABF4 /* Constants.swift */,
 				E8DE1AB92B442D850091ABF4 /* Assets.xcassets */,
 				E8DE1ABB2B442D850091ABF4 /* LaunchScreen.storyboard */,
@@ -235,6 +242,8 @@
 				E8DE1AEC2B443E910091ABF4 /* CollectionListCoordinator.swift */,
 				E8DE1AEE2B443EC30091ABF4 /* CollectionListViewController.swift */,
 				E8DE1AF42B46F5E00091ABF4 /* CollectionListViewModel.swift */,
+				E8DE1B012B4E57090091ABF4 /* CollectionListViewModelActions.swift */,
+				E8DE1AFF2B4E4CA60091ABF4 /* CollectionItemViewModel.swift */,
 			);
 			path = CollectionList;
 			sourceTree = "<group>";
@@ -244,6 +253,14 @@
 			children = (
 			);
 			path = CollectionDetail;
+			sourceTree = "<group>";
+		};
+		E8DE1B032B4E81EE0091ABF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8DE1B042B4E82130091ABF4 /* Kingfisher+Svg.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,11 +506,14 @@
 			files = (
 				E8DE1AE92B443CA60091ABF4 /* AppCoordinator.swift in Sources */,
 				E8DE1AED2B443E910091ABF4 /* CollectionListCoordinator.swift in Sources */,
+				E8DE1B022B4E57090091ABF4 /* CollectionListViewModelActions.swift in Sources */,
 				E8DE1AF12B45AB620091ABF4 /* CollectionItem.swift in Sources */,
 				E8DE1AE72B443C4C0091ABF4 /* StoryboardInitializable.swift in Sources */,
 				E8DE1AF72B46F8170091ABF4 /* CollectionListService.swift in Sources */,
 				E8DE1AEF2B443EC30091ABF4 /* CollectionListViewController.swift in Sources */,
 				E8DE1AB12B442D830091ABF4 /* AppDelegate.swift in Sources */,
+				E8DE1B052B4E82130091ABF4 /* Kingfisher+Svg.swift in Sources */,
+				E8DE1B002B4E4CA60091ABF4 /* CollectionItemViewModel.swift in Sources */,
 				E8DE1AF52B46F5E00091ABF4 /* CollectionListViewModel.swift in Sources */,
 				E8DE1AB32B442D830091ABF4 /* SceneDelegate.swift in Sources */,
 				E8DE1AE52B443AC50091ABF4 /* BaseCoordinator.swift in Sources */,

@@ -9,6 +9,7 @@ target 'ERCCollection' do
   pod 'Kingfisher'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'PocketSVG', '~> 2.6'
   pod 'SnapKit', '~> 5.0.0'
 
   target 'ERCCollectionTests' do
