@@ -16,9 +16,10 @@ class CollectionListCoordinator: BaseCoordinator<Void> {
     }
     
     override func start() -> Observable<Void> {
+        let viewModel = CollectionListViewModel()
         let viewController = CollectionListViewController.initFromStoryboard(name: "Main")
         let navigationController = UINavigationController(rootViewController: viewController)
-        
+        viewController.viewModel = viewModel
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

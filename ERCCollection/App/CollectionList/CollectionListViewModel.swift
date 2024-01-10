@@ -6,3 +6,38 @@
 //
 
 import Foundation
+import RxSwift
+import RxRelay
+
+class CollectionListViewModel: CollectionListViewModelActions {
+    
+    var collectionList = BehaviorRelay<[CollectionItemViewModel]>(value: [])
+    var scrollEnded = PublishRelay<Void>()
+    
+    private let collectionListService: CollectionListService
+    private let disposeBag = DisposeBag()
+    
+    init(collectionListService: CollectionListService = CollectionListService()) {
+        self.collectionListService = collectionListService
+        self.fetchCollections(currentPage: nil)
+    }
+}
+extension CollectionListViewModel {
+    func fetchCollections(currentPage: String?) {
+        self.collectionListService.getCollectionList(.firstPage)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] collectionItems in
+                let existData = self?.collectionList.value ?? []
+                let itemViewModels = collectionItems.map { CollectionItemViewModel($0) }
+                /// add new data to nil array
+                if existData.isEmpty {
+                    self?.collectionList.accept(itemViewModels)
+                } else {
+                    /// update exist data with adding new data
+                    self?.collectionList.accept(existData + itemViewModels)
+                }
+            }) { error in
+                print("Error: \(error)")
+            }.disposed(by: disposeBag)
+    }
+}
