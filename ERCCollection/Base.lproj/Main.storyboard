@@ -143,14 +143,27 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="BDP-Mg-LMz"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Zjv-WQ-k52"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-Dz-Yuy">
+                                <rect key="frame" x="76.666666666666686" y="750" width="240" height="48"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.61960784310000006" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kPi-Er-4k0"/>
+                                    <constraint firstAttribute="height" constant="48" id="w0z-Rr-iw7"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="permalink"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pbZ-SE-Ylv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="d5g-ef-KMx" firstAttribute="top" secondItem="pbZ-SE-Ylv" secondAttribute="top" id="Dso-mT-gtK"/>
                             <constraint firstItem="d5g-ef-KMx" firstAttribute="width" secondItem="XKm-be-exO" secondAttribute="width" id="Ifv-4q-0Ej"/>
+                            <constraint firstItem="pbZ-SE-Ylv" firstAttribute="bottom" secondItem="hGA-Dz-Yuy" secondAttribute="bottom" constant="20" id="TaK-se-kx0"/>
                             <constraint firstItem="d5g-ef-KMx" firstAttribute="centerX" secondItem="pbZ-SE-Ylv" secondAttribute="centerX" id="kqB-DA-etC"/>
                             <constraint firstItem="pbZ-SE-Ylv" firstAttribute="bottom" secondItem="d5g-ef-KMx" secondAttribute="bottom" id="lMR-F8-lKh"/>
+                            <constraint firstItem="hGA-Dz-Yuy" firstAttribute="centerX" secondItem="pbZ-SE-Ylv" secondAttribute="centerX" id="sTS-vX-9pM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -158,6 +171,7 @@
                         <outlet property="collectionItemDescription" destination="6Q1-gC-eMY" id="Sts-rv-sMB"/>
                         <outlet property="collectionItemName" destination="CRZ-wt-As6" id="9Ye-3s-Sfl"/>
                         <outlet property="imageHeightAnchor" destination="Ym5-gS-qmn" id="w5k-7T-qAE"/>
+                        <outlet property="permaLinkBtn" destination="hGA-Dz-Yuy" id="mpk-iQ-TWO"/>
                         <outlet property="scrollView" destination="d5g-ef-KMx" id="VIJ-tx-11V"/>
                     </connections>
                 </viewController>

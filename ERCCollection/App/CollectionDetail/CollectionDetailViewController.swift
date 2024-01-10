@@ -17,12 +17,15 @@ class CollectionDetailViewController: UIViewController, StoryboardInitializable 
     @IBOutlet weak var collectionItemDescription: UILabel!
     @IBOutlet weak var imageHeightAnchor: NSLayoutConstraint!
     
+    @IBOutlet weak var permaLinkBtn: UIButton!
+    
     private let disposeBag = DisposeBag()
     var viewModel: CollectionDetailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBinding()
     }
     
     private func setupUI() {
@@ -44,6 +47,12 @@ class CollectionDetailViewController: UIViewController, StoryboardInitializable 
                 print(error) // The error happens
             }
         }
+    }
+    
+    private func setupBinding() {
+        permaLinkBtn.rx.tap
+            .bind(to: viewModel.tabPermalink)
+            .disposed(by: disposeBag)
     }
     
     private func refreshLayout() {

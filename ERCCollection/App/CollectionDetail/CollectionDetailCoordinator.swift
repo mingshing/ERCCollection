@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import SafariServices
 
 class CollectionDetailCoordinator: BaseCoordinator<Void> {
     
@@ -23,8 +24,21 @@ class CollectionDetailCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let viewController = CollectionDetailViewController.initFromStoryboard(name: "Main")
         viewController.viewModel = viewModel
-        
+        viewModel.openPermalink
+                    .subscribe(
+                        onNext: { [weak self] in
+                            guard let self  = self else { return }
+                            self.openPermalink(in: navigationController)
+                    })
+                    .disposed(by: disposeBag)
         navigationController.pushViewController(viewController, animated: true)
         return Observable.never()
+    }
+    
+    private func openPermalink(in navigationController: UINavigationController) {
+        if let url = URL(string: "https://testnets.opensea.io/assets/goerli/") {
+            let safariViewController = SFSafariViewController(url: url)
+            navigationController.pushViewController(safariViewController, animated: true)
+        }
     }
 }
