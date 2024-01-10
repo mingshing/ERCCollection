@@ -10,13 +10,17 @@ import RxSwift
 class CollectionDetailCoordinator: BaseCoordinator<Void> {
     
     private let navigationController: UINavigationController
-
-    init(navigationController: UINavigationController) {
+    private let viewModel: CollectionDetailViewModel
+    
+    init(
+        with viewModel: CollectionDetailViewModel,
+        navigationController: UINavigationController
+    ) {
+        self.viewModel = viewModel
         self.navigationController = navigationController
     }
     
     override func start() -> Observable<Void> {
-        let viewModel = CollectionDetailViewModel()
         let viewController = CollectionDetailViewController.initFromStoryboard(name: "Main")
         viewController.viewModel = viewModel
         

@@ -30,8 +30,16 @@ class CollectionListCoordinator: BaseCoordinator<Void> {
         return Observable.never()
     }
     
-    private func showCollectionDetail(with: CollectionItemViewModel, on navigationController: UINavigationController) -> Observable<Void> {
-            let collectionDetailCoordinator = CollectionDetailCoordinator(navigationController: navigationController)
-            return coordinate(to: collectionDetailCoordinator)
-        }
+    private func showCollectionDetail(
+        with targetItem: CollectionItemViewModel,
+        on navigationController: UINavigationController
+    ) -> Observable<Void> {
+        
+        let collectionDetailViewModel = CollectionDetailViewModel(targetItem)
+        let collectionDetailCoordinator = CollectionDetailCoordinator(
+                with: collectionDetailViewModel,
+                navigationController: navigationController
+        )
+        return coordinate(to: collectionDetailCoordinator)
+    }
 }

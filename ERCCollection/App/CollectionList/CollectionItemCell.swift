@@ -18,19 +18,12 @@ class CollectionItemCell: UICollectionViewCell {
     
     func configure(with viewModel: CollectionItemViewModel) {
         nameLabel.text = viewModel.name
-        if isSVGFile(url: viewModel.imageUrl) {
+        if viewModel.imageUrl.isSVGFile {
             let imageSize = (UIScreen.main.bounds.width - 60) / 2
             let processor = SVGProcessor(size: CGSize(width: imageSize, height: imageSize))
             collectionImage.svgImage(from: viewModel.imageUrl, processor: processor)
         } else {
             collectionImage.kf.setImage(with: viewModel.imageUrl)
         }
-    }
-    
-    private func isSVGFile(url: URL) -> Bool {
-        let svgFileExtensions = ["svg"]
-
-        let fileExtension = url.pathExtension.lowercased()
-        return svgFileExtensions.contains(fileExtension)
     }
 }
