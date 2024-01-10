@@ -46,7 +46,10 @@ class CollectionListViewController: UIViewController, StoryboardInitializable {
                 print("indexPath: ", indexPath)
             }
             .disposed(by: disposeBag)
-
+        collectionView.rx.modelSelected(CollectionItemViewModel.self)
+            .bind(to: viewModel.selectCollection)
+            .disposed(by: disposeBag)
+        
         collectionView.rx.itemSelected
             .map({ $0.item })
             .subscribe { [weak self] indexPath in

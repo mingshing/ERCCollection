@@ -14,11 +14,17 @@ class CollectionListViewModel: CollectionListViewModelActions {
     var collectionList = BehaviorRelay<[CollectionItemViewModel]>(value: [])
     var scrollEnded = PublishRelay<Void>()
     
+    let selectCollection: AnyObserver<CollectionItemViewModel>
+    let showCollection: Observable<CollectionItemViewModel>
+    
     private let collectionListService: CollectionListService
     private let disposeBag = DisposeBag()
     
     init(collectionListService: CollectionListService = CollectionListService()) {
         self.collectionListService = collectionListService
+        let _selectCollection = PublishSubject<CollectionItemViewModel>()
+                self.selectCollection = _selectCollection.asObserver()
+        self.showCollection = _selectCollection.asObservable()
         self.fetchCollections(currentPage: nil)
     }
 }
