@@ -40,6 +40,11 @@ class CollectionListQueryParameter {
     }
 }
 
+struct CollectionListResponse: Codable {
+    let ownedNfts: [CollectionItem]
+    let pageKey: String?
+}
+
 class CollectionListService {
 
     private let session: URLSession
@@ -48,15 +53,15 @@ class CollectionListService {
         self.session = session
     }
 
-    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<[CollectionItem]> {
+    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<([CollectionItem], String?)> {
         
         if let generatedURL = generateURL(queryParam) {
             return session.rx.data(request: URLRequest(url: generatedURL))
                 .map { data in
                     let decoder = JSONDecoder()
-                    let collectionItems = try decoder.decode(CollectionList.self, from: data)
+                    let collectionItems = try decoder.decode(CollectionListResponse.self, from: data)
                     
-                    return collectionItems.ownedNfts
+                    return (collectionItems.ownedNfts, collectionItems.pageKey)
                 }
                 .asObservable()
         }

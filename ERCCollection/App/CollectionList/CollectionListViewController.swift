@@ -7,11 +7,13 @@
 
 import RxSwift
 import RxCocoa
+import NVActivityIndicatorView
 
-/// Shows a list of most starred repositories filtered by language.
 class CollectionListViewController: UIViewController, StoryboardInitializable {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var loadingView: NVActivityIndicatorView!
     
     var viewModel: CollectionListViewModel!
     private let disposeBag = DisposeBag()
@@ -25,6 +27,8 @@ class CollectionListViewController: UIViewController, StoryboardInitializable {
     private func setupUI() {
         self.title = "List"
         collectionView.delegate = self
+        loadingView.color = .systemGray
+        loadingView.type = .ballPulse
     }
 
     private func setupBindings() {
@@ -35,6 +39,11 @@ class CollectionListViewController: UIViewController, StoryboardInitializable {
                            cellType: CollectionItemCell.self)) { (_, viewModel, cell) in
                 cell.configure(with: viewModel)
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.showLoading.asObservable()
+            .observe(on: MainScheduler.instance)
+            .bind(to: loadingView.rx.isAnimating)
             .disposed(by: disposeBag)
         
         collectionView.rx.modelSelected(CollectionItemViewModel.self)

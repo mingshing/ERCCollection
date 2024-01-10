@@ -13,6 +13,9 @@ class CollectionListViewModel: CollectionListViewModelActions {
     
     var collectionList = BehaviorRelay<[CollectionItemViewModel]>(value: [])
     var scrollEnded = PublishRelay<Void>()
+    let showLoading = BehaviorRelay<Bool>(value: true)
+    
+    private var currentPageKey: String? = nil
     
     let selectCollection: AnyObserver<CollectionItemViewModel>
     let showCollection: Observable<CollectionItemViewModel>
@@ -25,25 +28,44 @@ class CollectionListViewModel: CollectionListViewModelActions {
         let _selectCollection = PublishSubject<CollectionItemViewModel>()
                 self.selectCollection = _selectCollection.asObserver()
         self.showCollection = _selectCollection.asObservable()
-        self.fetchCollections(currentPage: nil)
+        self.fetchCollections()
+        bindScrollEnded()
     }
 }
 extension CollectionListViewModel {
-    func fetchCollections(currentPage: String?) {
-        self.collectionListService.getCollectionList(.firstPage)
+    func fetchCollections() {
+        var queryParam: CollectionListQueryParameter
+        if let pageKey = self.currentPageKey {
+            queryParam = .nextPage(pageKey)
+        } else {
+            queryParam = .firstPage
+        }
+        showLoading.accept(true)
+        self.collectionListService.getCollectionList(queryParam)
             .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] collectionItems in
-                let existData = self?.collectionList.value ?? []
+            .subscribe(onNext: { [weak self] (collectionItems, pageKey) in
+                guard let self = self else { return }
+                self.showLoading.accept(false)
+                self.currentPageKey = pageKey
+                let existData = self.collectionList.value
                 let itemViewModels = collectionItems.map { CollectionItemViewModel($0) }
-                /// add new data to nil array
                 if existData.isEmpty {
-                    self?.collectionList.accept(itemViewModels)
+                    self.collectionList.accept(itemViewModels)
                 } else {
-                    /// update exist data with adding new data
-                    self?.collectionList.accept(existData + itemViewModels)
+                    self.collectionList.accept(existData + itemViewModels)
                 }
             }) { error in
                 print("Error: \(error)")
             }.disposed(by: disposeBag)
+    }
+    func bindScrollEnded() {
+        scrollEnded
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                if self.currentPageKey != nil {
+                    self.fetchCollections()
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }

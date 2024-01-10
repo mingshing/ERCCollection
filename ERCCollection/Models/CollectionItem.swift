@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct CollectionList: Codable {
-    let ownedNfts: [CollectionItem]
-}
-
 struct Contract: Codable {
     let name: String
 }

@@ -10,7 +10,7 @@ target 'ERCCollection' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'PocketSVG', '~> 2.6'
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'NVActivityIndicatorView'
 
   target 'ERCCollectionTests' do
     inherit! :search_paths

@@ -70,18 +70,29 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n5R-bg-2A2"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmT-1D-MhV" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="176.66666666666666" y="418.66666666666669" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RIk-8T-1gH"/>
+                                    <constraint firstAttribute="width" constant="40" id="gp9-Hp-KW5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qmT-1D-MhV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2AV-MO-CeN"/>
                             <constraint firstItem="iYI-Zw-mFC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3vP-l5-PHT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYI-Zw-mFC" secondAttribute="trailing" constant="20" id="LH9-p6-uQb"/>
                             <constraint firstAttribute="bottomMargin" secondItem="iYI-Zw-mFC" secondAttribute="bottom" id="Llj-wQ-iQy"/>
                             <constraint firstItem="iYI-Zw-mFC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l3C-Ef-2RU"/>
+                            <constraint firstItem="qmT-1D-MhV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yak-gz-GWf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="iYI-Zw-mFC" id="iBy-oo-iL9"/>
+                        <outlet property="loadingView" destination="qmT-1D-MhV" id="dvZ-dy-CK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

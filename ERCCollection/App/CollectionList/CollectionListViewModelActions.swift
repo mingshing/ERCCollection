@@ -9,9 +9,7 @@ import Foundation
 import RxCocoa
 
 protocol CollectionListViewModelActions: AnyObject {
-    func fetchCollections(
-        currentPage: String?
-    )
+    func fetchCollections()
     
     var collectionList : BehaviorRelay<[CollectionItemViewModel]> { get }
     var scrollEnded : PublishRelay<Void> { get }
