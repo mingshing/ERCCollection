@@ -43,10 +43,11 @@ extension CollectionListViewModel {
         showLoading.accept(true)
         self.collectionListService.getCollectionList(queryParam)
             .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] (collectionItems, pageKey) in
+            .subscribe(onSuccess: { [weak self] (collectionItems, pageKey) in
                 guard let self = self else { return }
                 self.showLoading.accept(false)
                 self.currentPageKey = pageKey
+                
                 let existData = self.collectionList.value
                 let itemViewModels = collectionItems.map { CollectionItemViewModel($0) }
                 if existData.isEmpty {
@@ -54,11 +55,12 @@ extension CollectionListViewModel {
                 } else {
                     self.collectionList.accept(existData + itemViewModels)
                 }
-            }) { error in
+            }, onFailure: { error in
                 print("Error: \(error)")
-            }.disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
-    func bindScrollEnded() {
+    private func bindScrollEnded() {
         scrollEnded
             .subscribe { [weak self] _ in
                 guard let self = self else { return }

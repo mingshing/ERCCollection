@@ -27,14 +27,24 @@ final class CollectionListViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testInitialFetch() {
+    func testInitialFetchSuccess() {
         let sut = CollectionListViewModel(collectionListService: CollectionListServiceMock())
         let collectionListObserver = scheduler.createObserver([CollectionItemViewModel].self)
+        let expectation = XCTestExpectation(description: "Fetching data")
+        
         sut.collectionList
             .bind(to: collectionListObserver)
             .disposed(by: disposeBag)
         
+        sut.collectionList
+            .subscribe({ _ in
+                expectation.fulfill()
+            })
+            .disposed(by: disposeBag)
+        
         scheduler.start()
+        wait(for: [expectation], timeout: 1)
+
         XCTAssertEqual(
             collectionListObserver.events,
             [
@@ -42,5 +52,67 @@ final class CollectionListViewModelTests: XCTestCase {
             ]
         )
     }
+    
+    func testScrollendFetchNextPageSuccess() {
+        let sut = CollectionListViewModel(collectionListService: CollectionListServiceMock())
+        let collectionListObserver = scheduler.createObserver([CollectionItemViewModel].self)
+        let expectation = XCTestExpectation(description: "Fetching data")
+        
+        sut.collectionList
+            .bind(to: collectionListObserver)
+            .disposed(by: disposeBag)
+        
+        sut.collectionList
+            .subscribe({ _ in
+                expectation.fulfill()
+            })
+            .disposed(by: disposeBag)
+        
+        scheduler.createColdObservable([.next(10, ())])
+            .bind(to: sut.scrollEnded)
+            .disposed(by: disposeBag)
+        
+        scheduler.start()
+        wait(for: [expectation], timeout: 1)
 
+        XCTAssertEqual(
+            collectionListObserver.events,
+            [
+                .next(0, MockData.collectionItemViewModels),
+                .next(10, MockData.collectionItemViewModels + MockData.collectionItemViewModels)
+            ],
+            "When we scroll to end and have next page, we should get the collection list with two pages data"
+        )
+    }
+    
+    func testScrollendWithoutNextPage() {
+        let sut = CollectionListViewModel(collectionListService: CollectionListServiceMock(.noNextPage))
+        let collectionListObserver = scheduler.createObserver([CollectionItemViewModel].self)
+        let expectation = XCTestExpectation(description: "Fetching data")
+        
+        sut.collectionList
+            .bind(to: collectionListObserver)
+            .disposed(by: disposeBag)
+        
+        sut.collectionList
+            .subscribe({ _ in
+                expectation.fulfill()
+            })
+            .disposed(by: disposeBag)
+        
+        scheduler.createColdObservable([.next(10, ())])
+            .bind(to: sut.scrollEnded)
+            .disposed(by: disposeBag)
+        
+        scheduler.start()
+        wait(for: [expectation], timeout: 1)
+
+        XCTAssertEqual(
+            collectionListObserver.events,
+            [
+                .next(0, MockData.collectionItemViewModels)
+            ],
+            "When we scroll to end and without next page, we won't trigger fetch next page action"
+        )
+    }
 }

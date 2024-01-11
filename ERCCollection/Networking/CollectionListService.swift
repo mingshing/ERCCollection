@@ -46,7 +46,7 @@ struct CollectionListResponse: Codable {
 }
 
 protocol CollectionListServiceType {
-    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<([CollectionItem], String?)>
+    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Single<([CollectionItem], String?)>
 }
 
 class CollectionListService: CollectionListServiceType {
@@ -57,7 +57,7 @@ class CollectionListService: CollectionListServiceType {
         self.session = session
     }
 
-    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<([CollectionItem], String?)> {
+    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Single<([CollectionItem], String?)> {
         
         if let generatedURL = generateURL(queryParam) {
             return session.rx.data(request: URLRequest(url: generatedURL))
@@ -67,9 +67,9 @@ class CollectionListService: CollectionListServiceType {
                     
                     return (collectionItems.ownedNfts, collectionItems.pageKey)
                 }
-                .asObservable()
+                .asSingle()
         }
-        return Observable.error(ServiceError.cannotGetURL)
+        return Single.error(ServiceError.cannotGetURL)
     }
     private func generateURL(_ queryParam: CollectionListQueryParameter) -> URL? {
         // Create URL components

@@ -7,6 +7,10 @@
 
 @testable import ERCCollection
 
+enum MockError: Error {
+    case someError
+}
+
 struct MockData {
     static let collectionItemList: [CollectionItem] = [
         CollectionItem(

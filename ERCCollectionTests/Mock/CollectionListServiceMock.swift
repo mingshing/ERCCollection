@@ -7,10 +7,25 @@
 import RxSwift
 @testable import ERCCollection
 
+enum CollectionServiceMockType {
+    case hasNextPage
+    case noNextPage
+    case error
+}
+
 class CollectionListServiceMock: CollectionListServiceType {
-    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<([CollectionItem], String?)> {
-        let itemList = MockData.collectionItemList
-        let queryPageKey = MockData.pageKey
-        return Observable.just((itemList, queryPageKey))
+    let mockType: CollectionServiceMockType
+    init(_ type: CollectionServiceMockType = .hasNextPage) {
+        self.mockType = type
+    }
+    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Single<([CollectionItem], String?)> {
+        switch mockType {
+        case .hasNextPage:
+            return .just((MockData.collectionItemList, MockData.pageKey))
+        case .noNextPage:
+            return .just((MockData.collectionItemList, nil))
+        case .error:
+            return .error(MockError.someError)
+        }
     }
 }
