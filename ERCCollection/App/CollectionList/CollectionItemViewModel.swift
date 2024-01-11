@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-struct CollectionItemViewModel {
+struct CollectionItemViewModel: Equatable {
     
     let contractName: String
     let name: String

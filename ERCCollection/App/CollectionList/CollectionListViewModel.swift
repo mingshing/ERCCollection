@@ -20,13 +20,13 @@ class CollectionListViewModel: CollectionListViewModelActions {
     let selectCollection: AnyObserver<CollectionItemViewModel>
     let showCollection: Observable<CollectionItemViewModel>
     
-    private let collectionListService: CollectionListService
+    private let collectionListService: CollectionListServiceType
     private let disposeBag = DisposeBag()
     
-    init(collectionListService: CollectionListService = CollectionListService()) {
+    init(collectionListService: CollectionListServiceType = CollectionListService()) {
         self.collectionListService = collectionListService
         let _selectCollection = PublishSubject<CollectionItemViewModel>()
-                self.selectCollection = _selectCollection.asObserver()
+        self.selectCollection = _selectCollection.asObserver()
         self.showCollection = _selectCollection.asObservable()
         self.fetchCollections()
         bindScrollEnded()

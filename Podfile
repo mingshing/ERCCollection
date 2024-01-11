@@ -15,6 +15,7 @@ target 'ERCCollection' do
   target 'ERCCollectionTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest'
   end
 
   target 'ERCCollectionUITests' do

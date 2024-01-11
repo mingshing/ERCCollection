@@ -45,7 +45,11 @@ struct CollectionListResponse: Codable {
     let pageKey: String?
 }
 
-class CollectionListService {
+protocol CollectionListServiceType {
+    func getCollectionList(_ queryParam: CollectionListQueryParameter) -> Observable<([CollectionItem], String?)>
+}
+
+class CollectionListService: CollectionListServiceType {
 
     private let session: URLSession
 

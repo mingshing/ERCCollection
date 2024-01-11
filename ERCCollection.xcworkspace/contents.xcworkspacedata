@@ -5,6 +5,9 @@
       location = "group:ERCCollection.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../ERCCollection.xctestplan">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
