@@ -29,6 +29,7 @@ class BaseCoordinator<ResultType> {
     ///
     /// - Parameter coordinator: Coordinator to start.
     /// - Returns: Result of `start()` method.
+    @discardableResult
     func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
         store(coordinator: coordinator)
         return coordinator.start()

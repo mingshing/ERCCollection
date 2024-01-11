@@ -33,13 +33,13 @@ class CollectionListCoordinator: BaseCoordinator<Void> {
     private func showCollectionDetail(
         with targetItem: CollectionItemViewModel,
         on navigationController: UINavigationController
-    ) -> Observable<Void> {
+    ) {
         
         let collectionDetailViewModel = CollectionDetailViewModel(targetItem)
         let collectionDetailCoordinator = CollectionDetailCoordinator(
                 with: collectionDetailViewModel,
                 navigationController: navigationController
         )
-        return coordinate(to: collectionDetailCoordinator)
+        coordinate(to: collectionDetailCoordinator)
     }
 }
