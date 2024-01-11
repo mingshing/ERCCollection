@@ -13,19 +13,19 @@ enum MockError: Error {
 
 struct MockData {
     static let collectionItemList: [CollectionItem] = [
-        CollectionItem(
-            contract: Contract(name: "Testing ContractName"),
-            name: "Testing item name",
-            description: "Testing description",
-            image: ImageURL(originalURL: "image origin URL")
-        ),
-        CollectionItem(
-            contract: Contract(name: "Testing ContractName 2"),
-            name: "Testing item name 2",
-            description: "Testing description 2",
-            image: ImageURL(originalURL: "image origin URL 2")
-        )
+        collectionItem,
+        collectionItem
     ]
     static var collectionItemViewModels: [CollectionItemViewModel] = collectionItemList.map { CollectionItemViewModel($0) }
+    
+    static var collectionItem: CollectionItem = CollectionItem(
+        contract: Contract(name: "Testing ContractName"),
+        name: "Testing item name",
+        description: "Testing description",
+        image: ImageURL(originalURL: "image origin URL")
+    )
+    
+    static var collectionItemViewModel: CollectionItemViewModel = CollectionItemViewModel(collectionItem)
+    
     static let pageKey: String = "mockPageKey"
 }
