@@ -51,7 +51,7 @@ class CollectionDetailViewController: UIViewController, StoryboardInitializable 
     
     private func setupBinding() {
         permaLinkBtn.rx.tap
-            .bind(to: viewModel.tabPermalink)
+            .bind(to: viewModel.tapPermalink)
             .disposed(by: disposeBag)
     }
     

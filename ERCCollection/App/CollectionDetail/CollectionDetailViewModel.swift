@@ -14,7 +14,7 @@ class CollectionDetailViewModel {
     let name: String
     let description: String
     let imageUrl: URL
-    let tabPermalink: AnyObserver<Void>
+    let tapPermalink: AnyObserver<Void>
     let openPermalink: Observable<Void>
     
     init(_ itemViewModel: CollectionItemViewModel) {
@@ -22,8 +22,8 @@ class CollectionDetailViewModel {
         self.name = itemViewModel.name
         self.description = itemViewModel.description
         self.imageUrl = itemViewModel.imageUrl
-        let _tabPermalink = PublishSubject<Void>()
-        self.tabPermalink = _tabPermalink.asObserver()
-        self.openPermalink = _tabPermalink.asObservable()
+        let _tapPermalink = PublishSubject<Void>()
+        self.tapPermalink = _tapPermalink.asObserver()
+        self.openPermalink = _tapPermalink.asObservable()
     }
 }
