@@ -15,12 +15,12 @@ class BaseCoordinator<ResultType> {
     let disposeBag = DisposeBag()
 
     private let identifier = UUID()
-    private var childCoordinators = [UUID: Any]()
+    private var navigatingCoordinator: UUID?
     private func store<T>(coordinator: BaseCoordinator<T>) {
-        childCoordinators[coordinator.identifier] = coordinator
+        navigatingCoordinator = coordinator.identifier
     }
     private func free<T>(coordinator: BaseCoordinator<T>) {
-        childCoordinators[coordinator.identifier] = nil
+        navigatingCoordinator = nil
     }
 
     /// 1. Stores coordinator in a dictionary of child coordinators.
@@ -32,8 +32,13 @@ class BaseCoordinator<ResultType> {
     @discardableResult
     func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
         store(coordinator: coordinator)
+        
         return coordinator.start()
-            .do(onNext: { [weak self] _ in self?.free(coordinator: coordinator) })
+            .do(
+                onNext: { [weak self] _ in
+                    self?.free(coordinator: coordinator)
+                }
+            )
     }
 
     /// Starts job of the coordinator.
